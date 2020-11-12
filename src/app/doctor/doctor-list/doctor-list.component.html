@@ -1,0 +1,64 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Doctor List</span>
+      <span class="example-spacer"></span>
+      <div>
+        <button mat-raised-button color="accent" (click)="onAddDoctor()">Add</button>
+    </div>
+    </mat-toolbar>
+  </p>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  
+  <ng-container matColumnDef="FirstName">
+    <th mat-header-cell *matHeaderCellDef> FirstName </th>
+    <td mat-cell *matCellDef="let doctor"> {{doctor.firstName}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="LastName">
+    <th mat-header-cell *matHeaderCellDef> LastName </th>
+    <td mat-cell *matCellDef="let doctor"> {{doctor.lastName}} </td>
+  </ng-container>
+
+  
+  <ng-container matColumnDef="Rating">
+    <th mat-header-cell *matHeaderCellDef> Rating </th>
+    <td mat-cell *matCellDef="let doctor"> {{doctor.rating}} </td>
+  </ng-container>
+
+ 
+  <ng-container matColumnDef="Age">
+    <th mat-header-cell *matHeaderCellDef> Age </th>
+    <td mat-cell *matCellDef="let doctor"> {{doctor.age}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Update">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let doctor">
+      <mat-icon (click)="onViewDoctorDetail(doctor)">visibility</mat-icon>
+      <mat-icon (click)="onUpdateOpenDialog(doctor)">edit</mat-icon>
+      <mat-icon (click)="onDeleteOpenDialog(doctor)">remove_circle_outline</mat-icon>
+     
+    </td>
+
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<!-- 
+<ag-grid-angular
+    style="width: 75%; height: 75%;"
+    class="ag-theme-alpine"
+    [rowData]="doctorData"
+    [columnDefs]="doctorColumnDefs"
+    
+    >
+</ag-grid-angular> -->
+

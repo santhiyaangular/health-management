@@ -1,0 +1,54 @@
+
+<h1 mat-dialog-title>Add-patient</h1>
+<div mat-dialog-content>
+  <div class="row">
+    <div class="column">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First name" [(ngModel)]="patient.firstName" required>
+          <mat-hint>only alphapet</mat-hint>
+    
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Age</mat-label>
+          <input matInput placeholder="age" [(ngModel)]="patient.age">
+          </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>PCP</mat-label>
+          <input matInput placeholder="pcp" [(ngModel)]="patient.pcp">
+          </mat-form-field>
+      </div> 
+
+    </div>
+    <div class="column">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="First name" [(ngModel)]="patient.lastName">
+          <mat-hint>only alphapet</mat-hint>
+    
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Visits</mat-label>
+          <input matInput placeholder="age" [(ngModel)]="patient.visits">
+          </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Insurance</mat-label>
+          <input matInput placeholder="pcp" [(ngModel)]="patient.insurance">
+          </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-action>
+    <button mat-button [mat-dialog-close]="patient">Add</button>
+</div>

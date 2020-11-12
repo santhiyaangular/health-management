@@ -1,0 +1,36 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>patient List</span>
+      <span class="example-spacer"></span>
+      <div>
+        <button mat-raised-button color="accent" (click)="openAddDialog()">Add</button>
+    </div>
+    
+    </mat-toolbar>
+  </p>
+
+  <div class="row">
+      <div class="column">
+          <h2>First Name</h2>
+      </div>
+      <div class="column">
+          <h2>Age</h2>
+      </div>
+      <div class="column">
+         <h2>Doctor Name</h2>
+      </div>
+      <div class="column">
+          <h2>Update</h2>
+      </div>
+      <div class="column">
+          <h2>Delete</h2>
+      </div>
+  </div>
+
+
+  <app-patient-list-item *ngFor="let patient of patientList"
+                        [patient]="patient">
+</app-patient-list-item>

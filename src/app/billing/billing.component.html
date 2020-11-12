@@ -1,0 +1,15 @@
+<p>billing works!</p>
+<ol>
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="billName">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="billAmount">
+      You chose: <i>{{billAmount}}</i>
+    </li>
+  </ol>

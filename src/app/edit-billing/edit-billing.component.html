@@ -1,0 +1,13 @@
+<p>edit-billing works!</p>
+<h1 mat-dialog-title>Hi {{data.billName}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.billAmount">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.billAmount" cdkFocusInitial>Ok</button>
+</div>

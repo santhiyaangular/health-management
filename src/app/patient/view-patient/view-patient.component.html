@@ -1,0 +1,37 @@
+<!-- <p>view-patient works!</p>
+<mat-card  class="login-card">
+    <mat-card-header>
+        <mat-card-title>View Patient</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <input matInput [value]="data.firstName" 
+                    formControlName="firstName"
+                    placeholder="First Name" name="firstName">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.age" 
+                    formControlName="age"
+                    placeholder="Age" name="age">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput [value]="data.pcp" 
+                    formControlName="pcp"
+                    placeholder="PCP" name="pcp">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+</mat-card> -->
+<h1 mat-dialog-title>view-patient</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+
+        <h6>FirstName</h6>
+        <input matInput [value]="data.firstName">
+        <h6>Age</h6>
+        <input matInput [value]="data.age">
+        <h6>PCP</h6>
+        <input matInput [value]="data.pcp">
+    </mat-form-field>
+</div>
